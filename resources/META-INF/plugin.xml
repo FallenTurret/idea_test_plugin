@@ -29,4 +29,9 @@
     </action>
   </actions>
 
+  <project-components>
+    <component>
+      <implementation-class>ru.hse.idea.copypaste.MessageOnPasteInitializer</implementation-class>
+    </component>
+  </project-components>
 </idea-plugin>

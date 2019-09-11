@@ -7,8 +7,6 @@ import com.intellij.ui.ToolbarDecorator;
 import com.intellij.ui.treeStructure.Tree;
 
 import javax.swing.*;
-import javax.swing.tree.DefaultMutableTreeNode;
-import javax.swing.tree.TreeNode;
 
 public class ASTAction extends AnAction {
 
@@ -35,13 +33,6 @@ public class ASTAction extends AnAction {
         frame.setContentPane(ToolbarDecorator.createDecorator(tree).createPanel());
         frame.pack();
         frame.setVisible(true);
-    }
-
-    private void dfs(TreeNode x) {
-        System.out.println(x);
-        for (int i = 0; i < x.getChildCount(); i++) {
-            dfs(x.getChildAt(i));
-        }
     }
 
     @Override
