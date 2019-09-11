@@ -2,10 +2,10 @@
   <id>ru.hse.idea.ast</id>
   <name>AST</name>
   <version>1.0</version>
-  <vendor email="gavrilov_dan@mail.ru" url="http://www.github.com/FallenTurret">FallenTurret</vendor>
+  <vendor>FallenTurret</vendor>
 
   <description><![CDATA[
-      This plugin adds toolbar button, which shows AST of highlighted code.
+      This plugin adds toolbar button, which shows AST of selected code.
       Also, special message pops up after pasting code to editor<br>
     ]]></description>
 
@@ -24,6 +24,9 @@
 
   <actions>
     <!-- Add your actions here -->
+    <action id="AST.ID" class="ru.hse.idea.ast.ASTAction" text="AST" description="Show AST of selected code">
+      <add-to-group group-id="MainToolBar" anchor="last"/>
+    </action>
   </actions>
 
 </idea-plugin>
