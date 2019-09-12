@@ -9,12 +9,25 @@ import com.intellij.openapi.ui.popup.JBPopupFactory;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
+/**
+ * This class contains logic for AntiCopyPaste tool
+ */
 public class MessageOnPaste extends PasteHandler {
 
+    /**
+     * Constructs instance
+     * @param originalAction previous paste handler action
+     */
     public MessageOnPaste(EditorActionHandler originalAction) {
         super(originalAction);
     }
-    
+
+    /**
+     * This method is responsible for showing message after pasting
+     * @param editor editor with pasted code
+     * @param caret caret in editor
+     * @param dataContext context
+     */
     @Override
     public void doExecute(@NotNull Editor editor, @Nullable Caret caret, DataContext dataContext) {
         super.doExecute(editor, caret, dataContext);

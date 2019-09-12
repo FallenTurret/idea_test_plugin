@@ -7,6 +7,10 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Enumeration;
 
+/**
+ * This class implements logic of building range subtree from general AST.
+ * This class also implements swing interface of tree node for convenient output
+ */
 public class ASTRangeTreeNode implements TreeNode {
 
     private TreeNode parent;
@@ -20,6 +24,11 @@ public class ASTRangeTreeNode implements TreeNode {
         return left;
     }
 
+    /**
+     * Constructs subtree of general AST with root in largest common ancestor of argument nodes
+     * @param left node, which will represent far left lists
+     * @param right node, which will represent far right list
+     */
     public ASTRangeTreeNode(ASTNode left, ASTNode right) {
         this(ASTRangeTreeNode.largestCommonAncestor(left, right), null,
                 left.getTextRange().getStartOffset(),
